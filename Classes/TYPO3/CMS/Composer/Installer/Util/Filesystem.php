@@ -79,9 +79,18 @@ class Filesystem extends \Composer\Util\Filesystem {
 	 * @param bool $copyOnFailure
 	 */
 	public function symlink($source, $target, $copyOnFailure = TRUE) {
-		if (!file_exists($source)) {
-			throw new \InvalidArgumentException('The symlink source "' . $source . '" is not available.');
-		}
+
+		// temporary disabled to make it work with Web/
+//		$targetFolder = basename($target);
+//		if ($targetFolder === $target) {
+//			$targetFolder = '';
+//		} else {
+//			$targetFolder . '/';
+//		}
+//
+//		if (!file_exists($targetFolder . $source)) {
+//			throw new \InvalidArgumentException('The symlink source "' . $source . '" is not available.');
+//		}
 		if (file_exists($target)) {
 			throw new \InvalidArgumentException('The symlink target "' . $target . '" already exists.');
 		}

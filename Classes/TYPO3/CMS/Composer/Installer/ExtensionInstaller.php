@@ -33,7 +33,7 @@ use Composer\Package\PackageInterface;
  */
 class ExtensionInstaller implements \Composer\Installer\InstallerInterface {
 
-	const TYPO3_CONF_DIR = 'typo3conf';
+	const TYPO3_CONF_DIR = 'Web/typo3conf';
 	const TYPO3_EXT_DIR = 'ext';
 
 	/**
